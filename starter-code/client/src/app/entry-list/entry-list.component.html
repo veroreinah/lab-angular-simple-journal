@@ -1,5 +1,7 @@
 <ul *ngIf="list">
   <li *ngFor="let l of list">
+    <div [routerLink]="['/', l._id]">
     {{l.title}} - {{l.date | date: 'dd/MM/yyyy'}}
+    </div>
   </li>
 </ul>

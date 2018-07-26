@@ -1,0 +1,9 @@
+<div *ngIf="entry">
+  <h1>{{entry.title}}</h1>
+  <h3>{{entry.date| date: "dd/MM/yyyy"}}</h3>
+  <p>{{entry.content}}</p>
+</div>
+
+<button [routerLink]="['/']">Go Back</button>
+
+

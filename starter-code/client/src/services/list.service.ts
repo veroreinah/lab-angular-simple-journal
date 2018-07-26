@@ -14,4 +14,9 @@ export class ListService {
     return this.http.get(`${baseUrl}/api/journal-entries`)
       .map((res) => res.json());
   }
+
+  getOne(id:string): Observable<object>{
+    return this.http.get(`${baseUrl}/api/journal-entries/${id}`)
+      .map((res) => res.json());
+  }
 }
