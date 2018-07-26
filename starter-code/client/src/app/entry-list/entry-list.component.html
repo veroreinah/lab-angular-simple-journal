@@ -1,3 +1,5 @@
+<app-entry-form (onChange)="updateList()"></app-entry-form>
+
 <ul *ngIf="list">
   <li *ngFor="let l of list">
     <div [routerLink]="['/', l._id]">

@@ -19,4 +19,10 @@ export class EntryListComponent implements OnInit {
     });
   }
 
+  updateList(){
+    this.listServ.getList().subscribe(list => {
+      this.list = list;
+    });
+  }
+
 }

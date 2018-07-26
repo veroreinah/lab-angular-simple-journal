@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { environment} from '../environments/environment';
+import { environment} from 'environments/environment';
 
 const { baseUrl } = environment;
 
@@ -18,5 +18,9 @@ export class ListService {
   getOne(id:string): Observable<object>{
     return this.http.get(`${baseUrl}/api/journal-entries/${id}`)
       .map((res) => res.json());
+  }
+
+  createEntry(entry:object){
+    return this.http.post(`${baseUrl}/api/journal-entries`, entry);
   }
 }
